@@ -1,0 +1,14 @@
+exp1:
+https://www.encodeproject.org/experiments/ENCSR149GYK/
+curl -L -k https://www.encodeproject.org/files/ENCFF633VDV/@@download/ENCFF633VDV.bed.gz -o ENCFF633VDV.bed.gz
+gzcat ENCFF633VDV.bed.gz| cut -f1-5 > H3K36me3.ENCFF633VDV.bed.gz.mm10.bed
+
+epx2:
+https://www.encodeproject.org/experiments/ENCSR295ZLV/
+curl -L -k https://www.encodeproject.org/files/ENCFF034WYM/@@download/ENCFF034WYM.bed.gz -o ENCFF034WYM.bed.gz
+gzcat ENCFF034WYM.bed.gz| cut -f1-5 > H3K36me3.ENCFF034WYM.bed.gz.mm10.bed
+
+*use jupyter*
+
+cat  H3K36me3.filtered.bed  |   sort -V  -k1,1 -k2,2  |   bedtools merge   >  H3K36me3.merge.mm10.bed 
+bedtools intersect -a mouseZ-DNA1.bed -b H3K36me3.merge.mm10.bed > H3K36me3.intersect_with_mouseZ.mm10.bed
