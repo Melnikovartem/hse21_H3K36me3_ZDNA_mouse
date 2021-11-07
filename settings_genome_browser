@@ -20,5 +20,5 @@ https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master
 track visibility=dense name="known genes" description="genes.bed"
 https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/genes.bed
 
-track visibility=dense name="known genes intersect"  description="genes_intersect.bed"
-https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/genes_intersect.bed
+track visibility=dense name="known genes intersect with"  description="genes.H3K36me3.intersect_with_mouseZ.mm10.bed"
+https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/genes.H3K36me3.intersect_with_mouseZ.mm10.bed
