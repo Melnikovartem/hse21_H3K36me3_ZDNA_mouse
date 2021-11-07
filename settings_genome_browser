@@ -1,0 +1,10 @@
+track visibility=dense name="ENCFF034WYM"  description="H3K36me3.ENCFF034WYM.filtered.bed"
+https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/H3K36me3.ENCFF034WYM.filtered.bed
+
+track visibility=dense name="ENCFF633VDV"  description="H3K36me3.ENCFF633VDV.filtered.bed"
+https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/H3K36me3.ENCFF633VDV.filtered.bed
+
+track visibility=dense name="ChIP_merge"  color=50,50,200   description="H3K36me3.merge.mm10.bed"
+https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/H3K36me3.merge.mm10.bed
+
+--------
