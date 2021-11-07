@@ -12,6 +12,5 @@ https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master
 track visibility=dense name="mouseZ"  color=0,200,0  description="mouseZ"
 https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/mouseZ.bed
 
-track visibility=dense name="intersect_with_DeepZ"  color=200,0,0  description="H3K36me3.intersect_with_DeepZ.bed"
+track visibility=dense name="intersect_with_mouseZ"  color=200,0,0  description="H3K36me3.intersect_with_mouseZ.bed"
 https://raw.githubusercontent.com/Melnikovartem/hse21_H3K36me3_ZDNA_mouse/master/data/H3K36me3.intersect_with_mouseZ.mm10.bed
-
