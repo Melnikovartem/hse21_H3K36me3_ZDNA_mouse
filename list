@@ -15,3 +15,9 @@ cat  H3K36me3.filtered.bed  |   sort -V  -k1,1 -k2,2  |   bedtools merge   >  H3
 
 cat  mouseZ-*  |   sort -V -k1,1 -k2,2   |   bedtools merge   >  mouseZ.bed 
 bedtools intersect -a mouseZ.bed -b H3K36me3.merge.mm10.bed > H3K36me3.intersect_with_mouseZ.mm10.bed
+
+
+chr2: 27019560-27019640
+
+
+curl -L -k "https://genome.ucsc.edu/cgi-bin/hgTables?hgsid=1208204641_xNAIrUQEonV1V077EA06hLFQdaXM&boolshad.hgta_printCustomTrackHeaders=0&hgta_ctName=tb_ncbiRefSeq&hgta_ctDesc=table+browser+query+on+ncbiRefSeq&hgta_ctVis=pack&hgta_ctUrl=&fbQual=whole&fbUpBases=200&fbExonBases=0&fbIntronBases=0&fbDownBases=200&hgta_doGetBed=get+BED" -o genes.bed
