@@ -22,4 +22,8 @@ chr2: 27019560-27019640
 
 curl -L -k "https://genome.ucsc.edu/cgi-bin/hgTables?hgsid=1208204641_xNAIrUQEonV1V077EA06hLFQdaXM&boolshad.hgta_printCustomTrackHeaders=0&hgta_ctName=tb_ncbiRefSeq&hgta_ctDesc=table+browser+query+on+ncbiRefSeq&hgta_ctVis=pack&hgta_ctUrl=&fbQual=whole&fbUpBases=200&fbExonBases=0&fbIntronBases=0&fbDownBases=200&hgta_doGetBed=get+BED" -o genes.bed
 
+# for data
 bedtools intersect -a genes.bed -b H3K36me3.intersect_with_mouseZ.mm10.bed > genes_intersect.bed 
+# for browser
+bedtools intersect -a genes.bed -b H3K36me3.intersect_with_mouseZ.mm10.bed | cut -f1-5 > genes.H3K36me3.intersect_with_mouseZ.mm10.bed
+
