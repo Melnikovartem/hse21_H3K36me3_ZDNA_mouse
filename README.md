@@ -5,7 +5,7 @@
 Проблемы начинаются уже на этапе выбора гистона. Как бы это сказать... на [encodeproject](https://www.encodeproject.org/search/?type=Experiment&control_type!=*&assay_term_name=ChIP-seq&status=released&assay_title=Histone+ChIP-seq&replicates.library.biosample.donor.organism.scientific_name=Homo+sapiens&replicates.library.biosample.donor.organism.scientific_name=Mus+musculus)
 у Mus musculus нет экспериментов над H2AFZ/H3F3A (прошу поправить меня, если не прав, но я вроде все разделы перебрал)
 
-Так что выбираем самый популярный гистоновую метку **H3K36me3**.\
+Так что выбираем самую популярную гистоновую метку **H3K36me3**.\
 В качестве ткани для исследовния отвественным решением было случайно выбрана днк клетки печени.
 
 Скачаем и обрежем эксперементы (все команды для macOS):
