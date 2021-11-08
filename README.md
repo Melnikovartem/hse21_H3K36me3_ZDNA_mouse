@@ -26,7 +26,7 @@ epx2
 
 Дальше фильтруем и строем гистограммы через [jupyter notebook](/src/Untitled.ipynb)
 
-Эксперимент | Оригинал            |  Убрали выбросы
+Эксперимент | Оригинал            |  Убрали выбросы (выбросили больше 5000)
 :-------------------------:|:-------------------------:|:-------------------------:
 ENCFF034WYM | ![](/img/ENCFF034WYM_nofilter.png)  |  ![](/img/ENCFF034WYM_filter.png)
 ENCFF633VDV | ![](/img/ENCFF633VDV_nofilter.png)  |  ![](/img/ENCFF633VDV_filter.png)
@@ -51,25 +51,27 @@ merge экспериментов
 анализ участков вторичной структуры
 ````
 > cat  mouseZ-*  |   sort -V -k1,1 -k2,2   |   bedtools merge   >  mouseZ.bed 
-> bedtools intersect -a mouseZ.bed -b H3K36me3.merge.mm10.bed > H3K36me3.intersect_with_mouseZ.mm10.bed
-```` 
-
-Строим pie chart и hist chart, для данных генома:
+````
 
 Hist            |  Pie
 :-------------------------:|:-------------------------:
 ![](/img/ZDNA.png)  |  ![Will come soon](/img/)
 
+```
+> bedtools intersect -a mouseZ.bed -b H3K36me3.merge.mm10.bed > H3K36me3.intersect_with_mouseZ.mm10.bed
+```
 
-Финальная версия [genom browser](https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1%3A43778741%2D43778780&hgsid=1208521687_4cseGCUHrBoxb5ehJNJxLLhMEobG). Все настройки можно найти в [файле](/settings_genome_browser)
+Пересечение:
 
 ![Will come soon](/img/)
+
+Финальная версия [genom browser](https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1%3A43778741%2D43778780&hgsid=1208521687_4cseGCUHrBoxb5ehJNJxLLhMEobG). Все настройки можно найти в [файле](/settings_genome_browser)
 
 Набор пересечений для проверки:
 
 + chr2: 27019560-27019640
-+ chr2: 27019560-27019640
-+ chr2: 27019560-27019640
+
+![](/img/genome_browser_fin.png)
 
 В духе меня я скачиваю все размеченые геномы, чтобы отфильтровать в ручную:
 ```` 
