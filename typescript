@@ -13979,4 +13979,17 @@ The downloaded source packages are in
 Updating HTML index of packages in '.Library'
 Making 'packages.html' ... done
 There were 27 warnings (use warnings() to see them)
-[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://Artems-MBP-2.Dlink/Users/hi_melnikov/Desktop/hse/bio/hw1/src[0m[27m[24m[J(base) hi_melnikov@Artems-MBP-2 src % [K[?2004h
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://Artems-MBP-2.Dlink/Users/hi_melnikov/Desktop/hse/bio/hw1/src[0m[27m[24m[J(base) hi_melnikov@Artems-MBP-2 src % [K[?2004hccd ..[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://Artems-MBP-2.Dlink/Users/hi_melnikov/Desktop/hse/bio/hw1[0m[27m[24m[J(base) hi_melnikov@Artems-MBP-2 hw1 % [K[?2004hggit add .[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://Artems-MBP-2.Dlink/Users/hi_melnikov/Desktop/hse/bio/hw1[0m[27m[24m[J(base) hi_melnikov@Artems-MBP-2 hw1 % [K[?2004hggit commit -m :"  ""s"p"e"n"d" "a"n" "h"o"u"r" "o"r" "2" "j"u"s"t" "t"r"y"i"n"g" "t"o" "u"s"e" "r"" R" "l"a"g"" n"g"a"" u"a"g"e" "f"o"r" "O"N"E" "F"U"C"K"I"N"G" "G"R"A"P"H"[?2004l
+[master 2fed1ca] spend an hour or 2 just trying to use R language for ONE FUCKING GRAPH
+ 13 files changed, 30542 insertions(+), 770 deletions(-)
+ delete mode 100644 Untitled.ipynb
+ create mode 100644 data/genes.names
+ create mode 100644 data/pantherdb_GO_analysis.txt
+ create mode 100644 img/mouse_no_needed_hist.png
+ create mode 100644 img/pantherdb_GO_analysis.png
+ create mode 100644 src/lib.R
+ create mode 100644 src/pie.R
+ create mode 100644 typescript
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://Artems-MBP-2.Dlink/Users/hi_melnikov/Desktop/hse/bio/hw1[0m[27m[24m[J(base) hi_melnikov@Artems-MBP-2 hw1 % [K[?2004h
