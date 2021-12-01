@@ -3,7 +3,7 @@ source('lib.R')
 ###
 
 # BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
-# BiocManager::install("TxDb.Mmusculus.UCSC.mm10.knownGene")
+ BiocManager::install("TxDb.Mmusculus.UCSC.mm10.knownGene")
 
 library(ChIPseeker)
 # library(TxDb.Hsapiens.UCSC.hg19.knownGene)
