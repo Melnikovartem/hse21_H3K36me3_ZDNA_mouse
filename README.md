@@ -1,3 +1,5 @@
+# HW 1
+
 Я, к своему сожалению, решил себе усложнить задачу пойдя по не простому пути. Так что нам предстоит вселая дорога анализа генома мыши. 
 
 <img src="/img/mouse_no_needed_hist.png" alt="" width="220" align="right"/>
@@ -24,7 +26,7 @@ epx2
 > gzcat ENCFF034WYM.bed.gz| cut -f1-5 > H3K36me3.ENCFF034WYM.bed.gz.mm10.bed
 ```` 
 
-Дальше фильтруем и строем гистограммы через [jupyter notebook](/src/Untitled.ipynb)
+Дальше фильтруем и строем гистограммы через [jupyter notebook](/src/Graphs_hw1.ipynb)
 
 Эксперимент | Оригинал            |  Убрали выбросы (выбросили больше 5000)
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -89,7 +91,7 @@ bedtools intersect -a genes.bed -b H3K36me3.intersect_with_mouseZ.mm10.bed | cut
 **for data**\
 bedtools intersect -a genes.bed -b H3K36me3.intersect_with_mouseZ.mm10.bed > genes_intersect.bed 
 
-Из последноего файла получаем спискок геномов на пересечениях(последние ячейки [jupyter notebook](/src/Untitled.ipynb))
+Из последноего файла получаем спискок геномов на пересечениях(последние ячейки [jupyter notebook](/src/Graphs_hw1.ipynb))
 
 Отправлям на анализ в [pantherdb](http://pantherdb.org/):
 
@@ -97,4 +99,24 @@ bedtools intersect -a genes.bed -b H3K36me3.intersect_with_mouseZ.mm10.bed > gen
 
 Я не супер биолог, но, вроде, результат вполне логичный - в днк ткани органа для обмена веществ (печень) встречается геном для метаболизма.
 
+# HW 2
 
+Скачиваем данные генома мыши, отсеиваем нужные отрезки [через python](/srs/Mapping_hw2.ipynb), потом спомощью bedtools выделяем из mm10.fasta (файла в git нет тк речь идет о 2.6Gb) нужные нам данные (собственно 2 класса: [0](/data/mm10_neg.fa) [1](/data/mm10_pos.fa))
+
+Далее делаем [нейронку](/src/Network_hw2.ipynb). Есть желание поправить ряд проблем, чтобы получить более хороший интсрумент для работы с данными (сейчас не хватает регуляризации => беды с переобучением), но кажется удолетворительного качества в 0.885 на тесте я добился (хоть надо учитывать, что размеры воборки оставляют желать лучшего) 
+
+Собственно архитектура похожа на те, что нам преподают на DL:
+
+```
+model.addInputLayer()
+model.addConvLayer(25, 10)
+model.addMaxPoolLayer(5)
+model.addConvLayer(10, 15)
+model.addMaxPoolLayer(2)
+model.addConvLayer(5, 10)
+model.addFullyConnectedLayer(10)
+model.addFullyConnectedLayer(10)
+model.addOutputLayer()
+```
+
+Ряд сверточных слоев, потом линейные, а потом softmax на все это (зашито в output)
